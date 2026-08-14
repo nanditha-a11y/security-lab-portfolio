@@ -55,9 +55,9 @@ I compared the responses returned for each username to identify differences in t
 
 ### Observation
 
-Most usernames produced the same response. However, **`user88`** produced a different response from the other usernames.
+Most usernames produced the same response. However, **`as400`** produced a different response from the other usernames.
 
-This difference indicated that `user88` was a valid username.
+This difference indicated that `as400` was a valid username.
 
 ### Screenshot
 
