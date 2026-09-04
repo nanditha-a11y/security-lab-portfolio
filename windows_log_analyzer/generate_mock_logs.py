@@ -1,0 +1,62 @@
+import os
+
+mock_xml_data = """<Events>
+    <!-- Failed logon attempts from an external IP -->
+    <Event>
+        <System><EventID>4625</EventID><TimeCreated SystemTime="2026-09-04T10:00:00Z"/></System>
+        <EventData>
+            <Data Name="TargetUserName">administrator</Data>
+            <Data Name="IpAddress">192.168.1.50</Data>
+        </EventData>
+    </Event>
+    <Event>
+        <System><EventID>4625</EventID><TimeCreated SystemTime="2026-09-04T10:00:05Z"/></System>
+        <EventData>
+            <Data Name="TargetUserName">administrator</Data>
+            <Data Name="IpAddress">192.168.1.50</Data>
+        </EventData>
+    </Event>
+    <Event>
+        <System><EventID>4625</EventID><TimeCreated SystemTime="2026-09-04T10:00:10Z"/></System>
+        <EventData>
+            <Data Name="TargetUserName">administrator</Data>
+            <Data Name="IpAddress">192.168.1.50</Data>
+        </EventData>
+    </Event>
+    <Event>
+        <System><EventID>4625</EventID><TimeCreated SystemTime="2026-09-04T10:00:15Z"/></System>
+        <EventData>
+            <Data Name="TargetUserName">administrator</Data>
+            <Data Name="IpAddress">192.168.1.50</Data>
+        </EventData>
+    </Event>
+    <Event>
+        <System><EventID>4625</EventID><TimeCreated SystemTime="2026-09-04T10:00:20Z"/></System>
+        <EventData>
+            <Data Name="TargetUserName">administrator</Data>
+            <Data Name="IpAddress">192.168.1.50</Data>
+        </EventData>
+    </Event>
+    <!-- Successful logon following failed attempts -->
+    <Event>
+        <System><EventID>4624</EventID><TimeCreated SystemTime="2026-09-04T10:01:00Z"/></System>
+        <EventData>
+            <Data Name="TargetUserName">administrator</Data>
+            <Data Name="IpAddress">192.168.1.50</Data>
+        </EventData>
+    </Event>
+    <!-- Suspicious PowerShell execution -->
+    <Event>
+        <System><EventID>4688</EventID><TimeCreated SystemTime="2026-09-04T10:02:00Z"/></System>
+        <EventData>
+            <Data Name="SubjectUserName">administrator</Data>
+            <Data Name="NewProcessName">C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe</Data>
+            <Data Name="ParentProcessName">C:\\Windows\\System32\\cmd.exe</Data>
+        </EventData>
+    </Event>
+</Events>"""
+
+with open("sample_logs.xml", "w", encoding="utf-8") as f:
+    f.write(mock_xml_data)
+
+print("Updated sample_logs.xml with rich detection test data!")
